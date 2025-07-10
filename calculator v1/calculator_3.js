@@ -1,5 +1,5 @@
 class Calculator {
-	operationHistory = [];
+	#operationHistory = [];
 
 	calculate(a, b, sign) {
 		if (isNaN(a) || isNaN(b)) return 'Niepoprawne wartości. Podaj liczbę.';
@@ -21,11 +21,11 @@ class Calculator {
 	}
 
 	addToHistory(operation) {
-		this.operationHistory.push(operation);
+		this.#operationHistory.push(operation);
 	}
 
 	printHistory() {
-		this.operationHistory.forEach((operation, index) => {
+		this.#operationHistory.forEach((operation, index) => {
 			console.log(`Operacja nr ${index + 1}: ${operation}`);
 		});
 	}
